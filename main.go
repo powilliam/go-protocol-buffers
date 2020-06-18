@@ -2,18 +2,16 @@ package main
 
 import (
 	"fmt"
-
-	pb "github.com/powilliam/go-protocol-buffers/protos"
 )
 
 func main() {
-	p := &pb.Person{
-		Id:    1234,
-        Name:  "John Doe",
-        Email: "jdoe@example.com",
-        Phones: []*pb.Person_PhoneNumber{
-                {Number: "555-4321", Type: pb.Person_HOME},
-        },
+	p := &Person{
+		Id: 1,
+		Name: "William Porto",
+		Email: "powilliam19@gmail.com",
+		Phones: []*Person_PhoneNumber{
+			{Type: Person_MOBILE, Number: "0000000"},
+		},
 	}
 
 	fmt.Println(p)
